@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #3aa6b9;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hide {
+  display: none !important;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+.winner {
+  font-size: 6vmin;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+.new-game {
+  padding: 2vmin;
+  border-radius: 1vmin;
+  border: none;
+  background-color: #ff9eaa;
+}
+
+h1 {
+  text-transform: capitalize;
+  font-size: 48px;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+  height: 60vmin;
+  width: 60vmin;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 8vmin;
+}
+
+.reset-btn {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  background-color: #ff9eaa;
+  border: none;
+  border-radius: 1rem;
+}
