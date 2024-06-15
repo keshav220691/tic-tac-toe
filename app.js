@@ -19,8 +19,9 @@ boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (box.innerText == "") {
       box.innerText = turn ? "O" : "X";
-      check(boxes);
       turn = !turn;
+      box.disabled = true;
+      check(boxes);
     }
   });
 });
@@ -47,11 +48,21 @@ function check(boxes) {
         winner.innerText = `Congrats ${pos1val} Won the match`;
         winner_msg.classList.remove("hide");
         disablebox(boxes);
-        return true;
+        return;
       }
     }
   }
-  return false;
+  if (isdraw()) {
+    winner.innerText = `Match Draw !!`;
+    winner_msg.classList.remove("hide");
+  }
+}
+
+function isdraw() {
+  for (let i = 0; i < boxes.length; i++) {
+    if (boxes[i].disabled == false) return false;
+  }
+  return true;
 }
 
 reset_btn.addEventListener("click", () => {
